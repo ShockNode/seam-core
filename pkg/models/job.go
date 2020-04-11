@@ -2,8 +2,8 @@ package models
 
 import "time"
 
-//Build ...
-type Build struct {
+//Job ...
+type Job struct {
 	Metadata
 	Environment
 	Status        Status

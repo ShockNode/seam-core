@@ -4,5 +4,5 @@ package models
 type Action interface {
 	Environment
 	GetMetadata() Metadata
-	Act(build *Build) error
+	Act(job *Job) error
 }

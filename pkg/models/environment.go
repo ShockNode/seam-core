@@ -1,6 +1,6 @@
 package models
 
-// Environment ...
-type Environment interface {
+// EnvironmentAccessor ...
+type EnvironmentAccessor interface {
 	GetEnvironmentVariables() map[string]interface{}
 }

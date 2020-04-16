@@ -2,12 +2,22 @@ package models
 
 import "time"
 
-//Job ...
-type Job struct {
+// Job ...
+type Job interface {
+	Seam
+	ActionsAccessor
+}
+
+// JobRunner ...
+type JobRunner interface {
+	Seam
+	Run(job Job) (*JobResult, error)
+}
+
+// JobResult ...
+type JobResult struct {
 	Metadata
-	Environment
 	Status        Status
-	Actions       []*Action
 	DateTimeStart time.Time
 	DateTimeEnd   time.Time
 }

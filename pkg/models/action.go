@@ -2,7 +2,11 @@ package models
 
 // Action ...
 type Action interface {
-	Environment
-	GetMetadata() Metadata
+	Seam
 	Act(job *Job) error
+}
+
+// ActionsAccessor ...
+type ActionsAccessor interface {
+	GetActions() ([]*Action, error)
 }

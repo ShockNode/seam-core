@@ -8,5 +8,5 @@ type Action interface {
 
 // ActionsAccessor ...
 type ActionsAccessor interface {
-	GetActions() ([]*Action, error)
+	GetActions() ([]Action, error)
 }

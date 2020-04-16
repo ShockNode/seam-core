@@ -3,7 +3,7 @@ package models
 // Action ...
 type Action interface {
 	Seam
-	Act(job *Job) error
+	Act(job Job) error
 }
 
 // ActionsAccessor ...
